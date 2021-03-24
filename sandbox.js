@@ -1,38 +1,37 @@
-// // let character = 'brooke'
-// // let age = 30;
-// // let isBlackBelt = false;
-// // character = 'you know who';
-// // const circ = (diameter: number) => {
-// //   return diameter * Math.PI;
-// // }
-// //console.log(circ('40')); <-- won't work
-// // console.log(circ(40)); <-- works!
-// //arrays 
-// let names = ['brooke', 'jacob', 'nomi'];
-// names.push('frog');
-// let numbers = [10, 20, 40, 80];
-// // numbers.push(30); <-- works
-// // numbers.push('30'); <-- nope
-// // numbers[1] = '30'; <-- nope
-// let mixedArray = [10, 'ten', 'this', 8, 9, false];
-// // mixedArray.push('hellllooo'); <-- works because type is included in array above
-// // mixedArray.push(5); <-- same
-// // mixedArray[0] = 'YOOO'; <-- same
-// let ninja = {
-//   name: 'ralph',
-//   belt: 'black',
-//   age: 30
-// };
-// ninja.age = 1000;
-// ninja.name = 'brooke';
-// // ninja.age = 'thirty' <-- does not workkkk
-// // ninja.skills = ['dancing', 'knife'] <-- does not work because there was no skills on the original Array
-// ninja = {
-//   name: 'okay',
-//   belt: 'green', 
-//   age: 40000,
-//   skills: [ <---- can't add skills because it doesn't match structure of initial objects
-//     'cool', 
-//     'things'
-//   ]
-// }
+//explicit types
+var character;
+var age;
+var isLoggedIn;
+// age = 'luigi'; <-- nope
+age = 30;
+// isLoggedIn = 25; <-- nope
+isLoggedIn = true;
+//arrays
+var ninjas = [];
+//initialize with a value in order to do .push because without = [] it's not initialized, just defining the type!
+// ninjas = [10, 23]; <--nope
+ninjas.push('ninja1', 'bruce lee');
+//union types
+var mixedArray = [];
+mixedArray.push('helloooo');
+mixedArray.push(50);
+// mixedArray.push(false); <--- doesn't work because we didn't include it in the union type above
+//(string|number|boolean) to get it to work
+//only use () when types are in front of an array
+console.log(mixedArray);
+var hello;
+hello = 'hey';
+hello = 43110;
+// hello = false; <-- nahhh
+//objects
+var goodbye;
+goodbye = {
+    "this": 'that',
+    those: 40
+};
+goodbye = {
+    "this": 'maybe',
+    those: 100
+};
+//can set an object to have specific types, must explicitly have all these key-value pairs with these types
+var okay;
